@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h1>About Us</h1>
+        <p>Welcome to the Deepfake Image Detector. This application uses a machine learning model to detect if an image is real or deepfake.</p>
+        <p>The model is based on the VGG16 architecture, fine-tuned for binary classification of images. It leverages deep learning techniques and image preprocessing to determine whether an image is manipulated.</p>
+        <p>Our goal is to help identify and combat the spread of deepfake content in social media and other platforms.</p>
+        <a class="btn" href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

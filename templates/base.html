@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div>
+        <img src="../static/logo.png" alt="TechTide">
+        <p>TechTide</p>
+    </div>
+    <div>
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+</nav>
+
+<!-- Content Block -->
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Deepfake Detector | Powered by TechTide</p>
+</footer>
+
+</body>
+</html>

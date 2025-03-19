@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card result_card">
+        <h1>Analysis Result</h1>
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image" class="img-fluid">
+        <p class="result-text {{ 'real' if result == 'Real' else 'deepfake' if result == 'Deepfake' else 'uncertain' }}">
+            {{ result }}
+        </p>
+        <a class="btn" href="{{ url_for('index') }}">Analyze Another Image</a>
+    </div>
+</div>
+{% endblock %}
